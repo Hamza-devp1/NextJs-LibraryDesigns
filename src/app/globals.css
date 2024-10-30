@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes rotate-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.7), 0 0 10px rgba(255, 105, 180, 0.5);
+    transform: rotate(0deg);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 162, 0, 1), 0 0 30px rgba(255, 162, 0, 0.7);
+    transform: rotate(5deg);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 204, 255, 0.7), 0 0 20px rgba(0, 204, 255, 0.5);
+    transform: rotate(0deg);
+  }
+}
+
+.animate-rotate-glow {
+  animation: rotate-glow 1.5s infinite alternate;
+}
+
+
